@@ -5,7 +5,7 @@ export class IGeoPoint {
     longitute_deg;
     altitude_deg;
 }
-const GeoPointSchema = new Schema({
+export const GeoPointSchema = new Schema({
     latitude_deg: {
         type: Number
     },

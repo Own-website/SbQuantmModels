@@ -1,13 +1,13 @@
 import {Schema , model, Types} from "mongoose"
 
-export class GeoPoint {
+export class IGeoPoint {
     _id?:Types.ObjectId;
     latitude_deg?: number ;
     longitute_deg?: number;
     altitude_deg?: number;
 }
 
-const GeoPointSchema: Schema =new Schema({
+export const GeoPointSchema: Schema =new Schema({
     latitude_deg: {
         type: Number
     },
@@ -19,4 +19,4 @@ const GeoPointSchema: Schema =new Schema({
     },
 }, {timestamps: true});
 
-export const GeoPointModel = model<GeoPoint>('geopoint',GeoPointSchema)
+export const GeoPointModel = model<IGeoPoint>('geopoint',GeoPointSchema)
